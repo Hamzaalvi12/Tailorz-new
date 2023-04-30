@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroundblur"
+    tools:context=".CustomerFragments.measurement">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#8AFFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2000dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/measurement_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Measurement"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/instructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/measurement_heading"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/instructions"
+                        android:textColor="@color/black"
+
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/pose1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/instructions"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/pose1"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/instructions"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toEndOf="@id/pose1"
+                        android:src="@drawable/pose2" />
+
+                    <RelativeLayout
+                        android:id="@+id/collar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pose1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/collar" />
+
+                        <RelativeLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/roundedcorners"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:id="@+id/collar_heading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:text="COLLAR"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/collar_heading"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:text="XX inches"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/waist_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/collar_layout"
+                        android:layout_margin="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/waist" />
+
+                        <RelativeLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/roundedcorners"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:id="@+id/waist_heading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:text="WAIST"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/waist_heading"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:text="XX inches"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/shoulder_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/waist_layout"
+                        android:layout_margin="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/shoulders" />
+
+                        <RelativeLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/roundedcorners"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:id="@+id/shoulder_heading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:text="SHOULDER"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/shoulder_heading"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:text="XX inches"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/chest_layout"
+                        android:layout_width="338dp"
+                        android:layout_height="97dp"
+                        android:layout_below="@id/shoulder_layout"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/chest" />
+
+                        <RelativeLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/roundedcorners"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:id="@+id/chest_heading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:text="CHEST"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/chest_heading"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:text="XX inches"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/measurementCameraBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/camera_btn"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

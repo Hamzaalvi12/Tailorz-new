@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/TailorImageCard"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:elevation="12dp"
+            android:layout_marginStart="10dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="2.0"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:id="@+id/TailorProfileImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/dummy">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/TailorImageCard"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tailorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hassan Ali"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+               />
+
+            <TextView
+                android:id="@+id/tailorCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male tailor"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/tailorName"
+                />
+
+            <ImageView
+                android:id="@+id/tailorRating"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/favorites_icon"
+                android:layout_below="@id/tailorCategory"
+                />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
